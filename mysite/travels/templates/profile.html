@@ -32,22 +32,51 @@
     <div class="container">
       <div class="page-header">
       </div>
+      <div class ="row">
+                <h1>Welcome to your Travitter profile </h1> </br> </br>
 
-      <div class="row">
-        <form>
-        <div class="col-xs-8">
-          <h1>Welcome to your Travitter profile </h1> </br> </br>
-          <label>What is your Travitter Tweet about?</label> </br>
-		<textarea style="border-radius:3; !important; border: solid thin #919091;" class="field span12 rows="2" cols="100"></textarea>
-        </div>
-       
-        </form>
       </div>
 
-    </div> <!-- /container -->
+ <div class="row">
+    <div class="tabbable">
+  		<ul id="mainTabs" class="nav nav-tabs">
+    		<li class="active"><a href="#tweet" data-toggle="tab">Tweet</a></li>
+    		<li><a href="#search" data-toggle="tab">Search</a></li>
+  		</ul>  
+  <div id="travitter-tabs" class="tab-content">
+    <div id="tweet" class="tab-pane fade in active">
+		<div class="col-xs-8">
+          <label>What is your Travitter Tweet about?</label> </br>
+		  <textarea style="border-radius:3; !important; border: solid thin #919091;" class="field span12 rows="2" cols="100"></textarea>
+        </div>       
+    </div>
+    <div id="search" class="tab-pane fade">
+    	<div class="col-xs-8">
+          <label>Search about information on travels from Twitter!</label> </br>
+			<textarea style="border-radius:3; !important; border: solid thin #919091;" class="field span12 rows="2" cols="100"></textarea>
+        </div>   		 
+    </div>
+    
+  </div><!-- /.tab-content -->
+</div><!-- /.tabbable -->
+</div>
+</div> <!-- /container -->
+   
+
+	    <script src="https://code.jquery.com/jquery.js"></script>
 
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script>
+    $(function(){
+    
+    	$('#search a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+    
+    });
+ 
 
+</script>
   </body>
 </html>
