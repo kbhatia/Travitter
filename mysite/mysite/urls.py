@@ -16,6 +16,7 @@ from travels import views
 
 urlpatterns = patterns('',
         url(r'^$', views.index, name='index'),
+        url(r'^accounts/profile', views.profile),
         url(r'', include('social_auth.urls')),
 )
         
