@@ -1,3 +1,4 @@
+import json
 """
 Django settings for mysite project.
 
@@ -37,9 +38,14 @@ AUTHENTICATION_BACKENDS = (
 
 # Application definition
 
-TWITTER_CONSUMER_KEY         = '9sJm5wZejpjEFTBoXf7AUg'
-TWITTER_CONSUMER_SECRET      = 'oCHlhIhh4cJPSvVeskByzR0peyLR6Q8eBbgrtXKewjE'
+TWITT_CONFIG = None
+with open((os.path.join(BASE_DIR,"travels","config.json")),"r") as text:
+	TWITT_CONFIG = json.load(text)
+	
+TWITTER_CONSUMER_KEY         = TWITT_CONFIG['TWITTER_CONSUMER_KEY']
+TWITTER_CONSUMER_SECRET      = TWITT_CONFIG['TWITTER_CONSUMER_SECRET']
 
+LOGIN_URL = '/login/'
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,7 +58,7 @@ INSTALLED_APPS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'social_auth.context_processors.social_auth_by_type_backends',
-    'django.contrib.auth.context_processors.auth,
+    'django.contrib.auth.context_processors.auth',
 )
 
 SOCIAL_AUTH_ENABLED_BACKENDS = ('twitter',)
