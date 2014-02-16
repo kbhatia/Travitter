@@ -2,3 +2,4 @@ mysite/travels/config.json
 mysite/mysite/settings.py
 *.pyc
 mysite/travitterdb
+mysite/mysite/db.json
