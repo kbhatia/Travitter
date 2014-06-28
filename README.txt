@@ -36,3 +36,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 SOCIAL_AUTH_ENABLED_BACKENDS = ('twitter', ...)
 SOCIAL_AUTH_DEFAULT_USERNAME = 'new_social_auth_user'
 
+
+Prototype project for making Twitter a most effictive tool for traveling purposes. 
+Later to be developed into a mobile app 
+
